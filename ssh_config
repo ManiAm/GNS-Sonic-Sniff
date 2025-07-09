@@ -1,0 +1,14 @@
+
+Host gns3-vm
+    HostName 192.168.2.107
+    User gns3
+
+Host mgmt-host
+    HostName 192.168.122.213
+    User root
+    ProxyJump gns3-vm
+
+Host sonic1-vm
+    HostName 10.10.10.102
+    User admin
+    ProxyJump mgmt-host
